@@ -7,8 +7,9 @@ An app to assist users in medication.
 4. Log medicine as taken/missed grouped by date.
 5. log side effects and update profile.
 6. Analytics to know about your medication and side effect history.
-
 ## How to run this project
 1. Download this github repo into your local machine and run "npm i" command in terminal.
 2. Create a .env file and add your aws s3, sendgrid, jwt credentials along with port.
 3. Run project using "npm start" command or "npm run app.js".
+## Video Link
+[Link Explaining the App](https://drive.google.com/file/d/1bEkPfXzi_lR_n6PHD1QDwcMR9rJtemtL/view?usp=drive_link)
