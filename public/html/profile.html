@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Profile</title>
+    <link rel="stylesheet" href="../css/profile.css" />
+  </head>
+  <body style="display: none">
+    <div class="navbar">
+      <div class="navbar-left">
+        <a href="./home.html"><img src="../img/logo.jpg" class="logo" /></a>
+        <button onclick="location.href='./report.html'">Dashboard</button>
+        <button onclick="location.href='./logs.html'">Logs</button>
+        <button onclick="location.href='./sideeffects.html'">
+          Side Effects
+        </button>
+      </div>
+      <div class="navbar-right">
+        <button onclick="location.href='./profile.html'">Profile</button>
+        <button onclick="logout()">Logout</button>
+      </div>
+    </div>
+
+    <div class="profile-container">
+      <div class="profile-info">
+        <h1>My Profile</h1>
+        <p><strong>Name:</strong> <span id="dispName"></span></p>
+        <p><strong>Email:</strong> <span id="dispEmail"></span></p>
+        <p><strong>Age:</strong> <span id="dispAge"></span></p>
+        <p><strong>Health Conditions:</strong> <span id="dispHealth"></span></p>
+      </div>
+      <div class="profile-card">
+        <form id="profileForm">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter new password"
+          />
+
+          <label for="age">Age:</label>
+          <input type="number" id="age" name="age" min="1" />
+
+          <label for="healthcon">Health Conditions (comma separated):</label>
+          <input
+            type="text"
+            id="healthcon"
+            name="healthcon"
+            placeholder="Diabetes, Asthma"
+          />
+          <button type="submit">Save Changes</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="../js/profile.js"></script>
+  </body>
+</html>

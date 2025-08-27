@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reports & Analytics</title>
+    <link rel="stylesheet" href="../css/report.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="navbar-left">
+        <a href="./home.html"><img src="../img/logo.jpg" class="logo" /></a>
+        <button onclick="location.href='./report.html'">Dashboard</button>
+        <button onclick="location.href='./logs.html'">Logs</button>
+        <button onclick="location.href='./sideeffects.html'">
+          Side Effects
+        </button>
+      </div>
+      <div class="navbar-right">
+        <button onclick="location.href='./profile.html'">Profile</button>
+        <button onclick="logout()">Logout</button>
+      </div>
+    </div>
+
+    <main>
+      <section class="report-section">
+        <h2>Medication Adherence</h2>
+        <canvas id="adherenceChart"></canvas>
+      </section>
+
+      <section class="report-section">
+        <h2>Daily Intake Trend</h2>
+        <canvas id="intakeTrendChart"></canvas>
+      </section>
+
+      <section class="report-section">
+        <h2>Side Effects by Severity</h2>
+        <canvas id="sideEffectChart"></canvas>
+      </section>
+
+      <section class="report-section">
+        <h2>Summary</h2>
+        <div id="summaryBox"></div>
+      </section>
+    </main>
+
+    <script src="../js/report.js"></script>
+  </body>
+</html>

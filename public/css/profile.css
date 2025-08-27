@@ -1,0 +1,77 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f7f8fc;
+  display: block;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background: #4a90e2;
+  padding: 10px 20px;
+  color: white;
+}
+
+.navbar-left,
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar button {
+  background: white;
+  border: none;
+  margin: 0 5px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.logo {
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.profile-container {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.profile-card,
+.profile-info {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* keep form styles same */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+form input,
+form button {
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+form button {
+  margin-top: 15px;
+  background: #27ae60;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}

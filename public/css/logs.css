@@ -1,0 +1,123 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f7f8fc;
+  display: block;
+  color: #333;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background: #4a90e2;
+  padding: 10px 20px;
+  color: white;
+}
+
+.navbar-left,
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar button {
+  background: white;
+  border: none;
+  margin: 0 5px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s ease-in-out;
+}
+
+.navbar button:hover {
+  background: #dce9f9;
+}
+
+.logo {
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+/* MAIN CONTAINER */
+.main-body {
+  padding: 20px;
+}
+
+/* LOGS TABLE */
+.logs-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.logs-table th {
+  background: #f0f4fa;
+  font-weight: bold;
+  padding: 12px;
+}
+
+.logs-table th,
+.logs-table td {
+  border: 1px solid #ddd;
+  text-align: center;
+  padding: 10px;
+}
+
+.logs-table tr:hover {
+  background: #f9fbff;
+}
+
+/* STATUS TAGS */
+.status-taken {
+  background: #d4f7d4;
+  color: #2d7a2d;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.status-missed {
+  background: #fddddd;
+  color: #a33a3a;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+/* ACTION BUTTONS */
+.action-btn {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: bold;
+  margin: 2px;
+}
+
+.btn-taken {
+  background: #4caf50;
+  color: white;
+}
+
+.btn-missed {
+  background: #f44336;
+  color: white;
+}
+
+.btn-taken:hover {
+  background: #3d8b40;
+}
+
+.btn-missed:hover {
+  background: #c62828;
+}

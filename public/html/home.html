@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medicine Assistant</title>
+    <link rel="stylesheet" href="../css/home.css" />
+  </head>
+  <body style="display: none">
+    <!-- NAVBAR -->
+    <div class="navbar">
+      <div class="navbar-left">
+        <a href="./home.html"><img src="../img/logo.jpg" class="logo" /></a>
+        <button onclick="location.href='./report.html'">Dashboard</button>
+        <button onclick="location.href='./logs.html'">Logs</button>
+        <button onclick="location.href='./sideeffects.html'">
+          Side Effects
+        </button>
+      </div>
+      <div class="navbar-right">
+        <button onclick="location.href='./profile.html'">Profile</button>
+        <button onclick="logout()">Logout</button>
+      </div>
+    </div>
+
+    <!-- MAIN BODY -->
+    <div class="main-body">
+      <!-- WELCOME -->
+      <div class="welcome">
+        <h2>Welcome, <span id="username">User</span> 👋</h2>
+        <p>Here’s your medicine schedule for today.</p>
+      </div>
+
+      <!-- QUICK ACTIONS -->
+      <div class="quick-actions">
+        <button id="addMedicineBtn">➕ Add Medicine</button>
+      </div>
+
+      <!-- UPCOMING REMINDERS -->
+      <div class="section">
+        <h3>⏰ Upcoming Reminders</h3>
+        <ul id="remindersList">
+          <li>Loading...</li>
+        </ul>
+      </div>
+
+      <!-- MEDICINE TABLE -->
+      <div class="section">
+        <h3>💊 Your Medicines</h3>
+        <label for="search">Search:</label>
+        <input
+          type="text"
+          id="search"
+          placeholder="Search by name, time slots..."
+        />
+
+        <table class="medicine-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Dosage</th>
+              <th>Time Slots</th>
+              <th>Stock</th>
+              <th>Refill Threshold</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="medicineTableBody"></tbody>
+        </table>
+      </div>
+
+      <!-- LATEST PRESCRIPTIONS -->
+      <div class="section">
+        <h3>📄 Latest Prescriptions</h3>
+        <ul id="latestPresList">
+          <li>Loading...</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ADD/EDIT MEDICINE MODAL -->
+    <div id="medicineModal" class="modal" style="display: none">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3 id="modalTitle">Add Medicine</h3>
+        <form id="medForm" onsubmit="addMed(event)">
+          <label>Name*</label>
+          <input type="text" id="name" required />
+
+          <label>Dosage</label>
+          <input type="text" id="dosage" required />
+
+          <label>Time Slots (comma separated)*</label>
+          <input type="text" id="timeSlots" required />
+
+          <label>Stock*</label>
+          <input type="number" id="stock" required />
+
+          <label>Refill Threshold</label>
+          <input type="number" id="refillThreshold" required />
+
+          <label>Start Date*</label>
+          <input type="date" id="startDate" required />
+
+          <label>End Date*</label>
+          <input type="date" id="endDate" />
+
+          <label>Prescription File (optional)</label>
+          <input
+            type="file"
+            id="prescriptionFile"
+            accept=".jpg,.jpeg,.png,.pdf"
+          />
+
+          <button type="submit">Save</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="../js/home.js"></script>
+  </body>
+</html>

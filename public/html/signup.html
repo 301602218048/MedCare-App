@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SignUp</title>
+    <link rel="stylesheet" href="/css/index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>MedCare App</h1>
+      <h2>Signup here!!</h2>
+      <form id="signupForm" onsubmit="handleSignUp(event)">
+        <div>
+          <label for="name">Name*</label>
+          <input type="text" name="name" id="name" required />
+        </div>
+        <div>
+          <label for="email">Email*</label>
+          <input type="email" name="email" id="email" required />
+        </div>
+        <div>
+          <label for="password">Password*</label>
+          <input type="password" name="password" id="password" required />
+        </div>
+        <div>
+          <label for="age">Age*</label>
+          <input type="number" name="age" id="age" required />
+        </div>
+        <div>
+          <label for="healthcon">Health Conditions</label>
+          <input type="text" name="healthcon" id="healthcon" />
+        </div>
+        <button type="submit">SignUp</button>
+        <div id="message"></div>
+      </form>
+      <a href="/html/login.html">Login</a>
+    </div>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.3/axios.min.js"></script>
+  <script src="/js/index.js"></script>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Medication Logs</title>
+    <link rel="stylesheet" href="../css/logs.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="navbar-left">
+        <a href="./home.html"><img src="../img/logo.jpg" class="logo" /></a>
+        <button onclick="location.href='./report.html'">Dashboard</button>
+        <button onclick="location.href='./logs.html'">Logs</button>
+        <button onclick="location.href='./sideeffects.html'">
+          Side Effects
+        </button>
+      </div>
+      <div class="navbar-right">
+        <button onclick="location.href='./profile.html'">Profile</button>
+        <button onclick="logout()">Logout</button>
+      </div>
+    </div>
+
+    <div class="main-body">
+      <h2>Your Intake Logs</h2>
+
+      <div class="section">
+        <h3>Filter Logs</h3>
+        <input type="date" id="filterDate" />
+        <button onclick="loadLogs()">Apply</button>
+      </div>
+
+      <div class="section">
+        <table class="logs-table" id="logsTable">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Medication</th>
+              <th>Status</th>
+              <th>Note</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="../js/logs.js"></script>
+  </body>
+</html>
